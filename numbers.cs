@@ -110,3 +110,78 @@ else
     Console.WriteLine("Возможно, вы ввели данный не корректно!");
 }
  */
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*
+ 
+int[] setOne = {1, 2, 3};
+int[] setTwo = {3, 4, 5};
+
+var result = setOne.Intersect(setTwo);
+
+foreach (int s in result)
+    Console.WriteLine(s); 
+
+Console.WriteLine("----------------------------------------------------------------------------------------");
+
+var resultSecond = setOne.Except(setTwo);
+var resultSecondS = setTwo.Except(setOne);
+var resultSecondSS = resultSecond.Union(resultSecondS);
+
+foreach (int s in resultSecondSS)
+    Console.WriteLine(s);
+
+Console.WriteLine("-----------------------------------------------------------------------------------------");
+
+var resultThird = setOne.Union(setTwo);
+
+foreach (int s in resultThird)
+    Console.WriteLine(s);
+
+Console.WriteLine("-------------------------------------------------------------------------------");
+
+var resultFourth = setOne.Except(setTwo);
+
+foreach (int s in resultFourth)
+    Console.WriteLine(s);
+
+ 
+*/
+
+
+/*
+ 
+class Transformations {
+    public static List<T> toSet<T>(T[] arr)
+    {
+        
+        List<T> list = arr.ToList();
+
+        return list;
+
+    }
+}
+
+*/
+
+
+static (int min, int max) MinMAx(HashSet<int> set)
+{
+    int min = int.MaxValue;
+    int max = int.MinValue;
+    foreach (int i in set)
+    {
+        if (i > min)
+        {
+            min = i;
+        }
+
+       else if (i < max)
+        {
+            max = i;
+        }
+
+    }
+    return (min, max);
+}
